@@ -1,0 +1,30 @@
+{
+  "name": "tobice-homepage",
+  "version": "1.0.0",
+  "description": "My personal homepage",
+  "main": "index.js",
+  "repository": "https://github.com/tobice/tobice-homepage",
+  "scripts": {
+    "dev": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config ./webpack/dev.js --progress --colors --port 9090 --inline",
+    "build": "./node_modules/webpack/bin/webpack.js --config ./webpack/build.js"
+  },
+  "author": "Tobiáš Potoček",
+  "email": "tobiaspotocek@gmail.com",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer-loader": "^2.0.0",
+    "babel": "^4.0.1",
+    "babel-core": "^4.0.1",
+    "babel-loader": "^4.0.0",
+    "css-loader": "^0.12.0",
+    "file-loader": "^0.8.4",
+    "less-loader": "^2.2.0",
+    "normalize.css": "^3.0.3",
+    "react-hot-loader": "^1.2.5",
+    "style-loader": "^0.12.1",
+    "url-loader": "^0.5.6",
+    "webpack": "^1.5.3",
+    "webpack-dev-server": "^1.8.0"
+  }
+}

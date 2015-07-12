@@ -1,0 +1,58 @@
+@import url("node_modules/normalize.css/normalize.css");
+@import url("assets/css/fontello.css");
+
+@bg: #313131;
+@blue: #3daee6;
+
+body {
+  font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
+  background-color: @bg;
+  color: darken(white, 10%);
+  font-size: 18px;
+  line-height: 1.6;
+  padding: 20px;
+}
+a {
+  color: @blue;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+strong, h1, h2, h3 {
+  color: white;
+}
+.page {
+  margin: 0 auto;
+  max-width: 600px;
+}
+ul.spaced li {
+  margin-bottom: 1em;
+}
+li > h3 {
+  font-size: 19px;
+  margin-bottom: 0
+}
+h3 > a > .year, h3 > .year {
+  font-size: 15px;
+  color: darken(white, 50%);
+}
+
+/** List icons (as they don't get included with fontello */
+@fa-li-width: 40px;
+.icon-ul {
+  padding-left: 0;
+  margin-left: @fa-li-width;
+  list-style-type: none;
+  > li { position: relative; }
+}
+.icon-li {
+  position: absolute;
+  left: -@fa-li-width;
+  width: @fa-li-width;
+  top: (2em / 14) - 0.1;
+  text-align: center;
+  &.icon-lg {
+    left: (-@fa-li-width + (4em / 14));
+  }
+}
