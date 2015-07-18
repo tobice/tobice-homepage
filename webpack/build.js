@@ -11,6 +11,7 @@ module.exports = {
         filename: 'bundle.js'
     },
     plugins: [
-        new optimize.UglifyJsPlugin()
+        // TODO: fix uglifying with React
+        // new optimize.UglifyJsPlugin()
     ]
 };

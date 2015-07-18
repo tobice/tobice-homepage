@@ -1,44 +1,58 @@
 @import url("node_modules/normalize.css/normalize.css");
 @import url("assets/css/fontello.css");
+@import url("node_modules/flux-lumines/src/styles/colorScheme.less");
 
 @bg: #313131;
 @blue: #3daee6;
 
 body {
-  font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
   background-color: @bg;
+  padding: 20px;
+}
+.disable-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+.page {
+  position: relative;
+  margin: 0 auto;
+  max-width: 600px;
+  z-index: 1;
+}
+
+
+/** Typography */
+.page {
   color: darken(white, 10%);
   font-size: 18px;
   line-height: 1.6;
-  padding: 20px;
-}
-a {
-  color: @blue;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-strong, h1, h2, h3 {
-  color: white;
-}
-.page {
-  margin: 0 auto;
-  max-width: 600px;
-}
-ul.spaced li {
-  margin-bottom: 1em;
-}
-li > h3 {
-  font-size: 19px;
-  margin-bottom: 0
-}
-h3 > a > .year, h3 > .year {
-  font-size: 15px;
-  color: darken(white, 50%);
+  font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
+  text-shadow: 10px 10px 15px darken(@bg, 8%);
+
+  a {
+    color: @blue;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  strong, h1, h2, h3 {
+    color: white;
+  }
+  ul.spaced li {
+    margin-bottom: 1em;
+  }
+  li > h3 {
+    font-size: 19px;
+    margin-bottom: 0
+  }
+  h3 > a > .year, h3 > .year {
+    font-size: 15px;
+    color: darken(white, 50%);
+  }
 }
 
-/** List icons (as they don't get included with fontello */
+/** List icons (as they don't get included with fontello) */
 @fa-li-width: 40px;
 .icon-ul {
   padding-left: 0;
@@ -55,4 +69,50 @@ h3 > a > .year, h3 > .year {
   &.icon-lg {
     left: (-@fa-li-width + (4em / 14));
   }
+}
+
+/** Lumines */
+.game-overlay {
+  width: 100%;
+  position: fixed;
+  z-index: 0;
+}
+#lumines-mountpoint {
+  width: 85%;
+  margin: 0 auto;
+}
+.game-muted .lumines {
+  .color-scheme(darken(@bg, 2%), lighten(@bg, 2%));
+
+  .lumines-grid line {
+    stroke: lighten(@bg, 2%);
+  }
+  .lumines-scanline {
+    opacity: 0.1;
+  }
+  .lumines-overlay {
+    opacity: 0;
+    animation: 0s;
+  }
+  .lumines-debug-bar {
+    opacity: 0;
+  }
+  .lumines-square-scanned {
+    fill: @bg;
+  }
+  .lumines-monoblock {
+    stroke: lighten(@bg, 4%);
+  }
+  .lumines-monoblock-light {
+    fill: lighten(@bg, 3%);
+  }
+  .lumines-monoblock-dark {
+    fill: darken(@bg, 3%);
+  }
+  .lumines-footer {
+    opacity: 0.1;
+  }
+
+
+  // TODO: make phone number active using RDF
 }

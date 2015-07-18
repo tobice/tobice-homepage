@@ -11,7 +11,10 @@
   "author": "Tobiáš Potoček",
   "email": "tobiaspotocek@gmail.com",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "reqwest": "^2.0.0",
+    "xhr2": "^0.1.2"
+  },
   "devDependencies": {
     "autoprefixer-loader": "^2.0.0",
     "babel": "^4.0.1",
@@ -19,6 +22,7 @@
     "babel-loader": "^4.0.0",
     "css-loader": "^0.12.0",
     "file-loader": "^0.8.4",
+    "flux-lumines": "tobice/flux-lumines",
     "less-loader": "^2.2.0",
     "normalize.css": "^3.0.3",
     "react-hot-loader": "^1.2.5",
