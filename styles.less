@@ -13,20 +13,27 @@ body {
   height: 100%;
   overflow: hidden;
 }
-.page {
+#page {
   position: relative;
   margin: 0 auto;
   max-width: 600px;
   z-index: 1;
+  opacity: 1;
+  transition: opacity .3s;
+}
+#page.page-hidden {
+  opacity: 0;
 }
 
 
 /** Typography */
-.page {
+body {
+  font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
+}
+#page {
   color: darken(white, 10%);
   font-size: 18px;
   line-height: 1.6;
-  font-family: "Roboto Condensed", "Helvetica Neue", sans-serif;
   text-shadow: 10px 10px 15px darken(@bg, 8%);
 
   a {
@@ -50,6 +57,9 @@ body {
     font-size: 15px;
     color: darken(white, 50%);
   }
+}
+.blue-text {
+  color: @blue;
 }
 
 /** List icons (as they don't get included with fontello) */
@@ -112,7 +122,36 @@ body {
   .lumines-footer {
     opacity: 0.1;
   }
+}
 
+/** Control buttons */
+.control-button {
+  position: fixed;
+  right: 20px;
+  text-align: right;
+  overflow: hidden;
+  opacity: 0;
+  height: 0;
+  transition: opacity 1s, height 1s;
+  cursor: pointer;
+  text-shadow: 10px 10px 15px darken(@bg, 8%);
 
-  // TODO: make phone number active using RDF
+  &.control-button-visible {
+    opacity: 1;
+    height: auto;
+  }
+  &.control-button-big {
+    text-transform: uppercase;
+    bottom: 50px;
+    font-size: 22px;
+    color: darken(white, 10%);
+  }
+  &.control-button-small {
+    bottom: 20px;
+    font-size: 17px;
+    color: darken(white, 25%);
+  }
+  &:hover {
+    color: white;
+  }
 }
