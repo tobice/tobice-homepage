@@ -2,6 +2,7 @@ import Lumines from 'flux-lumines';
 import reqwest from 'reqwest';
 import React from 'react';
 import classNames from 'classnames';
+import bowser from 'bowser';
 
 // Let's borrow some stuff from Lumines
 import {UPDATE} from 'flux-lumines/src/game/actions.js';
@@ -149,4 +150,9 @@ class ControlButton extends React.Component {
     }
 }
 
-React.render(<GameWrapper />, document.getElementById('game-wrapper'));
+
+const browser = bowser.browser;
+const disable = (browser.msie && browser.version < 10) || browser.tablet || browser.mobile;
+if (!disable) {
+    React.render(<GameWrapper />, document.getElementById('game-wrapper'));
+}
