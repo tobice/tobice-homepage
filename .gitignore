@@ -4,3 +4,5 @@ node_modules
 npm-debug.log
 bundle.js
 bundle.css
+bundle.css.map
+bundle.js.map
