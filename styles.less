@@ -88,9 +88,19 @@ body {
   z-index: 0;
 }
 #lumines-mountpoint {
-  width: 85%;
   margin: 0 auto;
+  width: 85%;
+  // hack to spread the SVG in IE
+  height: 0;
+  padding-top: 48%;
+  position: relative;
 }
+#lumines-mountpoint svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .game-muted .lumines {
   .color-scheme(darken(@bg, 2%), lighten(@bg, 2%));
 
