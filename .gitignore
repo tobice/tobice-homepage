@@ -1,5 +1,6 @@
 .idea
 tobice-homepage.iml
 node_modules
-bundle.js
 npm-debug.log
+bundle.js
+bundle.css

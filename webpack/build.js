@@ -1,3 +1,4 @@
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var optimize = require('webpack').optimize;
 var loaders = require('./loaders.js');
 
@@ -11,7 +12,7 @@ module.exports = {
         filename: 'bundle.js'
     },
     plugins: [
-        // TODO: fix uglifying with React
+        new ExtractTextPlugin("bundle.css"),
         // new optimize.UglifyJsPlugin()
     ]
 };
