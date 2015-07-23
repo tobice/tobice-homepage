@@ -9,19 +9,20 @@
 <body>
 <div id="game-wrapper"></div>
 
-<!-- TODO: make phone number active using RDF -->
-<div id="page">
-	<h1>Tobiáš Potoček</h1>
-	<em>PHP/Nette, JavaScript and Java software engineer, currently based in Prague</em>
+<div id="page" itemscope itemtype="http://schema.org/Person">
+	<h1 itemprop="name">Tobiáš Potoček</h1>
+	<em itemprop="jobtitle">
+		PHP/Nette, JavaScript and Java software engineer, currently based in Prague
+	</em>
 
 	<ul class="icon-ul">
 		<li>
 			<i class="icon-li icon-mail"></i>
-			<a href="mailto:tobiaspotocek@gmail.com">tobiaspotocek@gmail.com</a>
+			<a href="mailto:tobiaspotocek@gmail.com" itemprop="email">tobiaspotocek@gmail.com</a>
 		</li>
 		<li>
 			<i class="icon-li icon-phone"></i>
-			+420 604 880 671
+			<a href="tel:+420604880671" itemprop="telephone">+420 604 880 671</a>
 		</li>
 	</ul>
 
@@ -240,7 +241,7 @@
 	<ul>
 		<li><a href="https://forums.opensuse.org/member.php/39726-tobice">OpenSuse forum profile</a>
 			<em>(registration required to view the profile)</em></li>
-		<li><a href="https://forum.kde.org/memberlist.php?mode=viewprofile&u=13537&sid=e785ac2c2035324cb787ab2cd8d427de">
+		<li><a href="https://forum.kde.org/memberlist.php?mode=viewprofile&amp;u=13537&amp;sid=e785ac2c2035324cb787ab2cd8d427de">
 			KDE forum profile</a> <em>(registration required to view the profile)</em></li>
 		<li><a href="http://www.last.fm/user/tobice">Last.fm</a>
 			<em>(check out my 65 000+ listened tracks!)</em></li>
