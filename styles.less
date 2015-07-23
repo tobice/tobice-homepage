@@ -36,6 +36,13 @@ body {
   line-height: 1.6;
   text-shadow: 10px 10px 15px darken(@bg, 8%);
 
+  .hr {
+    border: 0;
+    background-color: lighten(@bg, 10%);
+    height: 2px;
+    margin: 20px 0;
+    box-shadow: 2px 2px 8px darken(@bg, 5%);
+  }
   a {
     color: @blue;
     text-decoration: none;
@@ -46,8 +53,14 @@ body {
   strong, h1, h2, h3 {
     color: white;
   }
-  ul.spaced li {
+  ul.spaced li, ul.separated li {
     margin-bottom: 1em;
+  }
+  ul.separated li:not(:last-child):after {
+    // Insert a line between list elements
+    content: '';
+    display: block;
+    .hr;
   }
   li > h3 {
     font-size: 19px;
@@ -56,6 +69,18 @@ body {
   h3 > a > .year, h3 > .year {
     font-size: 15px;
     color: darken(white, 50%);
+  }
+  h1 {
+    margin-bottom: 0.1em;
+  }
+  footer {
+    margin-top: 2em;
+    text-align: center;
+  }
+  footer, footer a {
+    text-shadow: none;
+    font-size: 16px;
+    color: lighten(@bg, 20%);
   }
 }
 .blue-text {
