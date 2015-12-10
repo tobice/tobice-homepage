@@ -24,7 +24,7 @@
             <i class="icon-li icon-phone"></i>
             <a href="tel:+420604880671" itemprop="telephone">+420 604 880 671</a> (CZ)
         </li>
-        <li>
+        <li style="text-decoration: line-through;">
             <i class="icon-li icon-phone"></i>
             <a href="tel:+15043128753" itemprop="telephone">+1 (504) 312-8753</a> (US)
         </li>
@@ -58,15 +58,6 @@
     <ul class="separated">
         <li>
             <h3>
-                University of New Orleans<br>
-                Department of Computer Science
-                <span class="year">(autumn 2015)</span>
-            </h3>
-            Participating in international exchange programme
-        </li>
-
-        <li>
-            <h3>
                 Charles University in Prague<br>
                 Faculty of Mathematics and Physics
                 <span class="year">(since 2013)</span>
@@ -86,13 +77,44 @@
         </li>
     </ul>
 
+    <h2>Education</h2>
+    <ul class="separated">
+        <li>
+            <h3>
+                University of New Orleans<br>
+                Department of Computer Science
+                <span class="year">(autumn 2015)</span>
+            </h3>
+            Participating in international exchange programme. I took classes in Distributed Systems, Planning in
+            Artificial Intelligence and Fundamentals of Game Development.
+        </li>
+
+        <li>
+            <h3>
+                University of Bergen<br>
+                Department of Informatics
+                <span class="year">(autumn 2014)</span>
+            </h3>
+            Participating in Erasmus exchange programme. I took classes in Cryptography, Social Web (analyzing data from
+            social networks) and Semantic Technologies.
+        </li>
+
+        <li>
+            <h3>
+                Charles University in Prague<br>
+                Faculty of Mathematics and Physics
+                <span class="year">(2010 &ndash; 2013)</span>
+            </h3>
+            Bachelor’s degree in General Informatics.
+        </li>
+    </ul>
+
     <p>
         For full education and work experience please check out my
         <a href="http://cz.linkedin.com/in/tobice">LinkedIn profile</a>.
     </p>
 
     <h2>My developer profile</h2>
-
     <ul class="spaced">
         <li>
             I got a solid theoretical background from school. During my postgraduate studies I have
@@ -118,7 +140,8 @@
             projects, my whole <a href="#tuudl">bachelor’s thesis</a>,
             a <strong>Google App Engine</strong> application,
             was written in Java. I also developed a small
-            <a href="#bambule"><strong>Android</strong> application</a> for Alltoys.
+            <a href="#bambule"><strong>Android</strong> application</a> for Alltoys. Another
+            recent Java project is <a href="#tjfs">tjfs</a>.
         </li>
 
         <li>
@@ -146,6 +169,18 @@
     <h2>The highlights of my work</h2>
 
     <ul class="separated">
+        <li>
+            <h3 id="tjfs">
+                <a href="https://github.com/tobice/tjfs">tjfs
+                    <span class="year">(late 2015)</span></a>
+            </h3>
+            <div>
+                During my stay at University of New Orleans we developed a high-availability
+                distributed file system based on the original Google FS design. The file system is
+                written completely in Java.
+            </div>
+        </li>
+
         <li>
             <h3>
                 <a href="https://github.com/tobice/flux-lumines">Lumines
@@ -257,6 +292,11 @@
             KDE forum profile</a> <em>(registration required to view the profile)</em></li>
         <li><a href="http://www.last.fm/user/tobice">Last.fm</a>
             <em>(check out my 65 000+ listened tracks!)</em></li>
+        <li>I published a <a href="https://www.zdrojak.cz/clanky/lumines-vytvarime-hru-v-react-js/">miniseries</a>
+            of articles about React, Flux and Immutable.js on
+            <a href="http://www.zdrojak.cz/">Zdroják.cz</a>, a Czech popular online magazine
+            for developers. The original text in English can be found
+            <a href="https://github.com/tobice/flux-lumines/wiki/Making-of-Lumines">here</a>.</li>
     </ul>
 
     <footer>
@@ -265,5 +305,21 @@
 </div>
 
 <script src="bundle.js"></script>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-7300111-5', 'auto');
+    ga('send', 'pageview');
+</script>
 </body>
 </html>
