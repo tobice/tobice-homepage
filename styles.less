@@ -56,8 +56,8 @@ body {
   ul.spaced li, ul.separated li {
     margin-bottom: 1em;
   }
-  ul.separated li:not(:last-child):after {
-    // Insert a line between list elements
+  ul.separated li:not(:last-child):after, h3.separated:not(:first-of-type):before {
+    // Insert a separating line
     content: '';
     display: block;
     .hr;
@@ -69,6 +69,9 @@ body {
   h3 > a > .year, h3 > .year {
     font-size: 15px;
     color: darken(white, 50%);
+  }
+  h3 > .company {
+    font-weight: normal;
   }
   h1 {
     margin-bottom: 0.1em;
