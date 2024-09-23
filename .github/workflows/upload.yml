@@ -1,0 +1,38 @@
+on: push
+name: 🚀 Deploy website on push
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: 📦 Install dependencies
+        run: npm install
+
+      - name: 🔨 Build project
+        run: npm run build
+
+      - name: 📂 Create dist folder
+        run: |
+          mkdir dist
+          cp -r assets dist/
+          cp index.html dist/
+          cp index.js dist/
+          cp bundle.js dist/
+          cp bundle.css dist/
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: tobice.cz
+          username: ${{ secrets.ftp_username }}
+          password: ${{ secrets.ftp_password }}
+          local-dir: dist
+          server-dir: public_html/www
